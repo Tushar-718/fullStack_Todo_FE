@@ -1,0 +1,99 @@
+@import "_colors.scss";
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=IBM+Plex+Sans:wght@300;400;500;700&family=Oswald:wght@300;400;700&family=Outfit:wght@200;400;700&family=Poppins:wght@100;200;300;400;600&family=Roboto+Condensed:wght@400;700&family=Ubuntu:wght@300;400;500;700&display=swap");
+
+@mixin linear-gradient-background($start-color, $end-color) {
+  background: linear-gradient(to bottom, $start-color, $end-color);
+}
+
+$fw1: 300;
+$fw2: 400;
+$fw3: 500;
+$fw4: 600;
+
+$fs16: 1rem;
+$fs20: 1.25rem;
+$fs24: 1.5rem;
+$fs28: 1.75rem;
+$fs32: 2rem;
+$fs36: 2.25rem;
+$fs40: 2.5rem;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  //   @include linear-gradient-background($darkpurple, $purple);
+  background-color: #5c469c;
+  font-family: poppins, sans-serif;
+}
+
+.container {
+  width: 500px;
+  min-height: 390px;
+  border-radius: 20px;
+  // background: $white;
+  background: #fff;
+  margin: auto;
+  margin-top: 174px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 44px;
+  padding-bottom: 30px;
+  margin-bottom: 100px;
+  box-shadow: rgba(0, 0, 0, 0.35) 5.4px 5.4px 5.2px;
+
+  > h1 {
+    margin-top: $fs40;
+    font-weight: $fw4;
+    font-size: $fs40;
+    text-align: center;
+    line-height: $fs32;
+  }
+  .top {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  input {
+    border-radius: $fs40;
+    border: 1px solid grey;
+    outline: none;
+    font-size: $fs20;
+    padding-left: $fs24;
+    width: 435px;
+    height: 40px;
+  }
+  .add {
+    background-color: #5c469c;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    border-radius: $fs40;
+  }
+  .add:hover {
+    transform: scale(1.1);
+  }
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #dbd8e3;
+  border-radius: $fs40;
+  box-shadow: rgba(0, 0, 0, 0.35) 2.4px 2.4px 3.2px;
+  .text {
+    font-weight: 500;
+  }
+  .icons {
+    display: flex;
+    gap: 0.5rem;
+    .icon {
+      cursor: pointer;
+      font-size: 20px;
+    }
+  }
+}
